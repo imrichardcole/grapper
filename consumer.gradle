@@ -1,0 +1,16 @@
+apply plugin: 'grapper'
+
+buildscript {
+    repositories {
+        maven {
+            url uri('../repo')
+        }
+    }
+    dependencies {
+        classpath group: 'org.imrichardcole', name: 'grapper', version: '0.0.1-SNAPSHOT'
+    }
+}
+
+grapper {
+    mainClassName 'com.imrichardcole.SuperApp'
+}
