@@ -1,0 +1,11 @@
+buildscript {
+    dependencies {
+        classpath fileTree("../build/libs")
+    }
+}
+
+apply plugin: 'grapper'
+
+grapper {
+    mainClassName 'com.imrichardcole.SuperApp'
+}
