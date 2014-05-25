@@ -1,1 +1,2 @@
-include 'grapper', 'test-app'
+include 'grapper'
+include 'test-app'

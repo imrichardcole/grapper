@@ -1,11 +1,16 @@
 buildscript {
     dependencies {
-        classpath fileTree("../build/libs")
+        classpath fileTree("../grapper/build/libs")
     }
 }
 
 apply plugin: 'grapper'
 
 grapper {
-    mainClassName 'com.imrichardcole.SuperApp'
+    mainClassName = 'com.imrichardcole.SuperApp'
+    additional = ['one', 'two', 'three']
+    java {
+        initMemory = 512
+        maxMemory = 512
+    }
 }
