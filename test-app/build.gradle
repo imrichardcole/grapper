@@ -7,10 +7,25 @@ buildscript {
 apply plugin: 'grapper'
 
 grapper {
-    mainClassName = 'com.imrichardcole.SuperApp'
-    additional = ['one', 'two', 'three']
     java {
+        mainClass = 'com.imrichardcole.SuperApp'
         initMemory = 512
         maxMemory = 512
+        classpath = ['foo.jar', 'bar.jar']
+        libraryPath = ['', '']
+        additional = ['one', 'two', 'three']
+    }
+    windows {
+        name = 'My Service'
+        displayName = ''
+        description = ''
+    }
+    logfile {
+        logfile = 'wrapper.log'
+        format = 'LPTM'
+        loglevel = 'INFO'
+        // these can be defaulted to 0 if missing
+        maxsize = 0
+        maxfiles = 0
     }
 }

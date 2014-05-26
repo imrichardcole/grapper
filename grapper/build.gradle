@@ -5,9 +5,50 @@ dependencies {
     compile gradleApi()
 }
 
-group = 'org.imrichardcole'
+group = 'uk.co.imrichardcole'
 version = '0.0.1-SNAPSHOT'
 
 task wrapper(type: Wrapper) {
     gradleVersion = '1.12'
+}
+
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+
+            repository(url: "https://oss.sonatype.org/content/repositories/snapshots") {
+                authentication(userName: sonatypeUsername, password: sonatypePassword)
+            }
+
+            pom.withXml {
+                asNode().appendNode('packaging', 'jar')
+            }
+
+            pom.project {
+                description 'A gradle plugin for working with Tanuki\'s Java Service Wrapper'
+                name 'Grapper'
+                url 'https://github.com/imrichardcole/grapper'
+                inceptionYear '2013'
+                licenses {
+                    license {
+                        name 'MIT license'
+                        url 'http://www.opensource.org/licenses/mit-license.php'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'imrichardcole'
+                        name 'Richard Cole'
+                    }
+                }
+                scm {
+                    connection 'https://github.com/imrichardcole/grapper.git'
+                    url 'https://github.com/imrichardcole/grapper'
+                }
+            }
+
+        }
+    }
 }
