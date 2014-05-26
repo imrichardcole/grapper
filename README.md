@@ -39,5 +39,5 @@ functionality is captured in a simple to usl DSL.
     
 If you have any questions, please feel free to raise them via the GitHub pages.
     
-    * Project Page: [https://github.com/imrichardcole/grapper](https://github.com/imrichardcole/grapper)
-    * Questions/Bugs: [https://github.com/imrichardcole/grapper/issues](https://github.com/imrichardcole/grapper/issues)
+* Project Page: [https://github.com/imrichardcole/grapper](https://github.com/imrichardcole/grapper)
+* Questions/Bugs: [https://github.com/imrichardcole/grapper/issues](https://github.com/imrichardcole/grapper/issues)
